@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-</head>
-<body>
-    <div class="container">
-        <h1 class="heading">Temperature Converter </h1>
-        <div class="temp-container">
-            <label for="Celcius">Celcius</label>
-            <input 
-            onchange ="computeTemp(event)"
-            type="number" 
-            name="Celcius" 
-            id="Celcius" 
-            class="Celcius" 
-            placeholder="Enter Temperature in Celcius"/>    
-        </div>
-        <div class="temp-container">
-            <label for="fahre">Fahrenheit</label>
-            <input 
-            onchange="computeTemp(event)"
-            type="number" 
-            name="Fahrenheit" 
-            id="Fahrenheit" 
-            class="Fahrenheit" 
-            placeholder="Enter Temperature in Fahrenheit"/>    
-        </div>
-        <div class="temp-container">
-            <label for="Kelvin">Kelvin</label>
-            <input 
-            onchange="computeTemp(event)"
-            type="number" 
-            name="Kelvin" 
-            id="Kelvin" 
-            class="Kelvin" 
-            placeholder="Enter Temperature in Kelvin"/>    
-        </div>
-    </div>
-    
-    
-    <script src="./script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Temperature Converter</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header>
+			<a href="#"><h1>Temperature Converter</h1></a>
+		</header>
+		<div class="container">
+			<form class="convert-form" novalidate>
+				<div class="degree">
+					<label>Degrees:</label>
+					<input type="number" class="input-degree" />
+				</div>
+				<div class="type">
+					<label>Type:</label>
+					<select id="degree-type">
+						<option value="celsius">Celsius</option>
+						<option value="fahrenheit">Fahrenheit</option>
+						<option value="kelvin">Kelvin</option>
+					</select>
+				</div>
+				<div class="convert-to">
+					<label>Convert To:</label>
+					<select id="convert-type">
+						<option value="celsius">Celsius</option>
+						<option value="fahrenheit">Fahrenheit</option>
+						<option value="kelvin">Kelvin</option>
+					</select>
+				</div>
+				<button class="convert-btn">Convert</button>
+			</form>
+			<div class="error"></div>
+			<div class="display">
+				<span>Result:</span>
+				<p class="display-result"></p>
+			</div>
+		</div>
+		<script src="main.js"></script>
+		<script src="convertFunctions.js"></script>
+	</body>
 </html>
